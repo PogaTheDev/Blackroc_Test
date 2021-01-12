@@ -98,10 +98,6 @@
         border-bottom: #c2c2c2 1px solid;
     }
 
-    .page{
-        
-    }
-
     .center {
         margin: auto;
         width: 40%;
@@ -115,37 +111,37 @@
 </style>
 
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Rainbow</title>
-</head>
-<body>
-    <div class="center page">
-        <h1>Mitchell's Movie Rainbow</h1>
-        <h3>Brought to you by <a href="http://www.omdbapi.com/">OMDb</a></h3>
-        <div>
-            <table class="movie_table">
-                <tr>
-                    <th>Title</th>
-                    <th>Year</th>
-                    <th>Media Type</th>
-                </tr>
-                <?php foreach($movies as $movie): ?>
-                <tr style="background-color:<?php echo $movie->Colour; ?>">
-                    <td>
-                        <?php echo $movie->Title ?>
-                    </td>
-                    <td>
-                        <?php echo $movie->Year ?>
-                    </td>
-                    <td>
-                        <?php echo $movie->Type ?>
-                    </td>
-                </tr>
-                <?php endforeach ?>
-            </table>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movie Rainbow</title>
+    </head>
+    <body>
+        <div class="center page">
+            <h1>Mitchell's Movie Rainbow</h1>
+            <h3>Brought to you by <a href="http://www.omdbapi.com/">OMDb</a></h3>
+            <div>
+                <table class="movie_table">
+                    <tr>
+                        <th>Title</th>
+                        <th>Year</th>
+                        <th>Media Type</th>
+                    </tr>
+                    <?php foreach($movies as $movie): ?>
+                    <tr style="background-color:<?php echo $movie->Colour; ?>">
+                        <td>
+                            <?php echo $movie->Title ?>
+                        </td>
+                        <td>
+                            <?php echo $movie->Year ?>
+                        </td>
+                        <td>
+                            <?php echo $movie->Type ?>
+                        </td>
+                    </tr>
+                    <?php endforeach ?>
+                </table>
+            </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>
