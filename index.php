@@ -20,6 +20,8 @@
     //
     ////////////////////////////////////////////////////////////////
 
+    // http://inexplainable-jug.000webhostapp.com/
+
     // Used to store all movie objects
     $movies = [];
     // Used to store movie titles to remove repeat entries into $movies
@@ -27,7 +29,7 @@
     // The colours used to search the api
     $colours = ['red', 'green', 'blue', 'yellow'];
     // Used to change the hex values associated with the colours in the movies
-    $colourHex = ['red'=>'#FF4A4A', 'green'=>'#5DFF4A', 'blue'=>'#4AADFF', 'yellow'=>'#FCFF4A'];
+    $colourHex = ['red'=>'#ffc1b8', 'green'=>'#d3ffb8', 'blue'=>'#b8ecff', 'yellow'=>'#fffab8'];
 
     // Find all the relevent movies
     foreach($colours as $colour) {
@@ -91,13 +93,24 @@
         text-align: center;
     }
 
+    td{
+        text-align: center;
+        border-bottom: #c2c2c2 1px solid;
+    }
+
+    .page{
+        
+    }
+
     .center {
         margin: auto;
         width: 40%;
     }
 
     .movie_table {
+        background-color: #c2c2c2;
         width:100%;
+        border-spacing: 0px;
     }
 </style>
 
@@ -108,7 +121,7 @@
     <title>Movie Rainbow</title>
 </head>
 <body>
-    <div class="center">
+    <div class="center page">
         <h1>Mitchell's Movie Rainbow</h1>
         <h3>Brought to you by <a href="http://www.omdbapi.com/">OMDb</a></h3>
         <div>
